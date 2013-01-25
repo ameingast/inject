@@ -39,7 +39,7 @@ public class Lazy<T> {
 
         Inject injAnn = field.getAnnotation(Inject.class);
         if (injAnn.required()) {
-            throw new at.yomi.ServiceNotFoundException(field);
+            throw new ServiceNotFoundException(field);
         }
 
         return null;
